@@ -1,0 +1,36 @@
+{
+    "type": "ORG",
+    "name": "aysh",
+    "locale": "en-US",
+    "preference": {
+        "organizationDetails": {
+            "displayName": "HappyPETS.io",
+            "siteTitle": "Welcome to Happy Pets",
+            "copyrightText": "© 2021 PETS",
+            "supportEmail": "help@happypets.com"
+        },
+        "images": {
+            "logo": {
+                "imgURL": "https://raw.githubusercontent.com/ayshsandu/asgardeo-trial-artifacts/main/pets-store-styles/paw.52fa7dff.svg",
+                "altText": "Happy pet, happy life"
+            },
+            "favicon": {
+                "imgURL": "https://raw.githubusercontent.com/ayshsandu/asgardeo-trial-artifacts/main/pets-store-styles/paw.52fa7dff.svg"
+            }
+        },
+        "urls": {
+            "privacyPolicyURL": "https://aysh-pets.io/privacy-policy",
+            "termsOfUseURL": "https://aysh-pet.io/terms-of-service/",
+            "cookiePolicyURL": "https://aysh-pet.io/privacy-policy/#cookie-policy"
+        },
+        "stylesheets": {
+            "accountApp": "https://ayshsandu.github.io/asgardeo-trial-artifacts/pets-store-styles/login-portal.overrides.css",
+            "myAccountApp": "https://ayshsandu.github.io/asgardeo-trial-artifacts/pets-store-styles/login-portal.overrides.css"
+        },
+        "configs": {
+            "isBrandingEnabled": true,
+            "removeDefaultBranding": false,
+            "selfSignUpEnabled": true
+        }
+    }
+}
