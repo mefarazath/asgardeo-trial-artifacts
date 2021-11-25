@@ -1,9 +1,9 @@
 :root {
-    --primaryColor: #010638;
-    --primaryColorDarker: #60467e;
+    --primaryColor: #5e2375;
+    --primaryColorDarker: #563461;
     --backgroundColor: #010638;
-    --accentColor: #c94a00;
-    --borderColor: #2a2e4c;
+    --accentColor: #a700c9;
+    --borderColor: #482a4c;
 }
 
 /*-----------------------------
