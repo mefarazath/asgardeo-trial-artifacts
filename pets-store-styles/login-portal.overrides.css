@@ -17,11 +17,11 @@
 
 /* Default Page with Blurred Patch */
 .login-portal.layout .page-wrapper {
-    background-color: #010638;
-    background-image: url(https://ayshsandu.github.io/asgardeo-trial-artifacts/pets-store-styles/login-portal.overrides.css/bg.4c3ef038.png), radial-gradient(at 80% 80%, #fafafa, var(--primary));
+    background-color: #bc87eb;
+    background-image: url(https://ayshsandu.github.io/asgardeo-trial-artifacts/pets-store-styles/bg.4c3ef038.png), radial-gradient(at 80% 80%, #fafafa, var(--primary));
     background-repeat: no-repeat;
     background-size: 600px;
-    background-position-y: bottom;
+    background-position-y: left;
     background-position-x: 5%;
     background-blend-mode: soft-light;
 }
