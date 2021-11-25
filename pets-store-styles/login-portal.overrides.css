@@ -4,6 +4,7 @@
     --backgroundColor: #bc87eb;
     --accentColor: #a700c9;
     --borderColor: #4c2b50;
+    --buttonTextColor: #fefefe;
 }
 
 /*-----------------------------
@@ -43,7 +44,7 @@
 /* Buttons */
 .ui.primary.button {
     background: var(--primaryColor) !important;
-    color: var(--backgroundColor) !important;
+    color: var(--buttonTextColor) !important;
 }
 
 .login-portal.layout .segment-form .ui.large.fluid.button.link-button {
@@ -96,3 +97,9 @@ a:hover {
 .login-portal.layout .footer .ui.text.menu .item {
     color: #231224;
 }
+
+.ui.form .field.field input:-webkit-autofill {
+    box-shadow: 0 0 0 100px ivory inset!important;
+    border-color: #d7a1e5!important;
+}
+
