@@ -1,9 +1,9 @@
 :root {
-    --primaryColor: #a660e4;
-    --primaryColorDarker: #6d32a0;
+    --primaryColor: #a760e6;
+    --primaryColorDarker: #612b91;
     --backgroundColor: #bc87eb;
     --accentColor: #a700c9;
-    --borderColor: #482a4c;
+    --borderColor: #4c2b50;
 }
 
 /*-----------------------------
@@ -17,13 +17,11 @@
 
 /* Default Page with Blurred Patch */
 .login-portal.layout .page-wrapper {
-    background-color: #bc87eb;
-    background-image: url(https://ayshsandu.github.io/asgardeo-trial-artifacts/pets-store-styles/bg.4c3ef038.png), radial-gradient(at 80% 80%, #fafafa, var(--primary));
+    background-attachment: fixed;
+    background-clip: content-box;
     background-repeat: no-repeat;
-    background-size: 600px;
-    background-position-y: left;
-    background-position-x: 5%;
-    background-blend-mode: soft-light;
+    background-position: left;
+    background-image: url(https://ayshsandu.github.io/asgardeo-trial-artifacts/pets-store-styles/bg.4c3ef038.png), radial-gradient(at 80% 80%, #fafafa,var(--primaryColor));
 }
 
 /* Error Page with Blurred Patch */
@@ -92,4 +90,9 @@ a:hover {
 /* Remove the margin in success page heading */
 .login-portal.layout .page-wrapper.success-page .slogan-container .slogan-message {
     margin-top: 10px;
+}
+
+
+.login-portal.layout .footer .ui.text.menu .item {
+    color: #231224;
 }
