@@ -27,7 +27,12 @@
 
 /* Error Page with Blurred Patch */
 .login-portal.layout .page-wrapper.error-page {
-    background: radial-gradient(circle at 68% 47%,rgba(217,88,88,.21840258) 0%, var(--backgroundColor) 25%, var(--backgroundColor) 100%);
+    /* background: radial-gradient(circle at 68% 47%,rgba(217,88,88,.21840258) 0%, var(--backgroundColor) 25%, var(--backgroundColor) 100%); */
+    background-attachment: fixed;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-image: url(https://ayshsandu.github.io/asgardeo-trial-artifacts/pets-store-styles/bg.4c3ef038.png), radial-gradient(at 80% 80%, #fafafa,var(--primaryColor));
 }
 
 /* Right Aligned Page with Blurred Patch - Shown in password recovery success */
