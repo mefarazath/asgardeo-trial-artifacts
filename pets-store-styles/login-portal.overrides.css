@@ -26,24 +26,9 @@
 }
 
 /* Error Page with Blurred Patch */
-.login-portal.layout .page-wrapper.error-page {
+/* Error, Success Pages */
+.login-portal.layout .page-wrapper.success-page, .login-portal.layout .page-wrapper.error-page {
     /* background: radial-gradient(circle at 68% 47%,rgba(217,88,88,.21840258) 0%, var(--backgroundColor) 25%, var(--backgroundColor) 100%); */
-    background-attachment: fixed;
-    background-clip: content-box;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-image: url(https://ayshsandu.github.io/asgardeo-trial-artifacts/pets-store-styles/bg.4c3ef038.png), radial-gradient(at 80% 80%, #fafafa,var(--primaryColor));
-}
-
-/* Right Aligned Page with Blurred Patch - Shown in password recovery success */
-.login-portal.layout .page-wrapper.right-aligned {
-    background: radial-gradient(circle at 72% 47%,rgba(243,115,33,.13836485) 0,var(--backgroundColor) 25%, var(--backgroundColor) 100%);
-                radial-gradient(circle at 72% 47%,rgba(144,37,142,.10433123) 0,rgba(245,246,246,.08559174) 27%,rgba(245,246,246,1) 100%);
-}
-
-/* Success Page with Blurred Patch */
-.login-portal.layout .page-wrapper.success-page {
-    /* background: radial-gradient(circle at 70% 47%, rgba(0,167,157,0.1852182262569832) 0%, var(--backgroundColor) 25%, var(--backgroundColor) 100%); */
     background-attachment: fixed;
     background-clip: content-box;
     background-repeat: no-repeat;
@@ -111,5 +96,9 @@ a:hover {
 .ui.form .field.field input:-webkit-autofill {
     box-shadow: 0 0 0 100px ivory inset!important;
     border-color: #d7a1e5!important;
+}
+
+.login-portal {
+    font-family: 'Montserrat';
 }
 
