@@ -25,7 +25,6 @@
     background-image: url(https://ayshsandu.github.io/asgardeo-trial-artifacts/pets-store-styles/bg.4c3ef038.png), radial-gradient(at 80% 80%, #fafafa,var(--primaryColor));
 }
 
-/* Error Page with Blurred Patch */
 /* Error, Success Pages */
 .login-portal.layout .page-wrapper.success-page, .login-portal.layout .page-wrapper.error-page {
     /* background: radial-gradient(circle at 68% 47%,rgba(217,88,88,.21840258) 0%, var(--backgroundColor) 25%, var(--backgroundColor) 100%); */
@@ -99,6 +98,6 @@ a:hover {
 }
 
 .login-portal {
-    font-family: 'Montserrat';
+    font-family: 'Fantacy';
 }
 
