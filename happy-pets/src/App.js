@@ -29,8 +29,8 @@ function App() {
             tokenEndpoint: 'https://sts.choreo.dev/oauth2/token',
             attachToken: false,
             data: {
-                client_id: 'QmkcMtDgMAuoL9cnNNuC6XDTSQEa',
-                client_secret: 'WbD8UabmY9Ueh338JPmG81fEPxIa',
+                client_id: process.env.REACT_APP_CHOREO_APP_CLIENT_ID,
+                client_secret: process.env.REACT_APP_CHOREO_APP_CLIENT_SECRET,
                 grant_type: 'urn:ietf:params:oauth:grant-type:token-exchange',
                 subject_token_type: 'urn:ietf:params:oauth:token-type:jwt',
                 requested_token_type: 'urn:ietf:params:oauth:token-type:jwt',
@@ -59,7 +59,7 @@ function App() {
             },
             attachToken: false,
             method: "GET",
-            url: "https://fc263d73-2930-473f-b767-bbb78f00c212-prod.e1-us-east-azure.choreoapis.dev/ytfv/greetings/1.0.0/?name=farasath",
+            url: process.env.REACT_APP_CHOREO_API_URL,
         };
 
         return httpRequest(requestConfig)
