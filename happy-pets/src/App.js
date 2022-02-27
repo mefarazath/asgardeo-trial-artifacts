@@ -16,15 +16,15 @@ function App() {
         (async () => {
             const idToken = await getIDToken();
             const choreoToken = await exchangeToken(idToken);
-            const apiResponse = await callAPI(choreoToken);
-            state.apiResponse = apiResponse.data;
-            console.log(state.apiResponse);
+            const apiResponse = await callAPI(choreoToken, state.username);
+            console.log(apiResponse);
         })();
     }, [state?.isAuthenticated]);
 
 
     const exchangeToken = (idToken) => {
         console.log("----   Requesting a token from Choreo ----")
+        console.log(idToken);
         const config = {
             tokenEndpoint: 'https://sts.choreo.dev/oauth2/token',
             attachToken: false,
@@ -49,17 +49,19 @@ function App() {
     }
 
 
-    const callAPI = (choreoToken) => {
+    const callAPI = (choreoToken, username) => {
+        console.log("----   Authenticated User: ", username)
         console.log("----   Calling the API with Bearer: ", choreoToken)
         const requestConfig = {
             headers: {
                 "Accept": "application/json",
-                "Content-Type": "application/scim+json",
+                "Content-Type": "application/json",
                 "Authorization": "Bearer " + choreoToken
             },
             attachToken: false,
             method: "GET",
             url: process.env.REACT_APP_CHOREO_API_URL,
+            params: {"customerEmail": username}
         };
 
         return httpRequest(requestConfig)
