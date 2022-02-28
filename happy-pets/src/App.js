@@ -6,7 +6,9 @@ import { useAuthContext } from "@asgardeo/auth-react";
 function App() {
     /** Empty state  */
     const { state, signIn, signOut, httpRequest, getIDToken, requestCustomGrant, getDecodedIDToken } = useAuthContext();
-    const [decodedIdToken, setDecodedIdToken] = useState();
+
+    const [ decodedIdToken, setDecodedIdToken ] = useState();
+    const [ insuranceClaimsFromAPI, setInsuranceClaimsFromAPI ] = useState(undefined);
 
     React.useEffect(() => {
         if (!state?.isAuthenticated) {
@@ -16,8 +18,13 @@ function App() {
         (async () => {
             const idToken = await getIDToken();
             const choreoToken = await exchangeToken(idToken);
-            const apiResponse = await callAPI(choreoToken, state.username);
-            console.log(apiResponse);
+
+            try {
+                const apiResponse = await callAPI(choreoToken, state.username);
+                setInsuranceClaimsFromAPI(apiResponse);
+            } catch (error) {
+                // Log or use an alert here.
+            }
         })();
     }, [state?.isAuthenticated]);
 
@@ -67,11 +74,11 @@ function App() {
         return httpRequest(requestConfig)
             .then((response) => {
                 // console.log("API response: ", response);
-                return response;
+                return response.data;
             })
             .catch((error) => {
-                console.log("API error: ", error);
-        });
+                throw error;
+            });
     };
 
     /**
@@ -109,6 +116,9 @@ function App() {
         <AppLayout
             isLoading={state.isLoading}
             isAuthenticated={state.isAuthenticated}
+            logoutButton={
+                <button onClick={() => signOut()}>Logout</button>
+            }
         >
             <LoginView
                 isAuthenticated={state.isAuthenticated}
@@ -120,9 +130,7 @@ function App() {
             <DashboardView
                 isAuthenticated={state.isAuthenticated}
                 username={state.username}
-                logoutButton={
-                    <button onClick={() => signOut()}>Logout</button>
-                }
+                insuranceClaims={ insuranceClaimsFromAPI }
             />
         </AppLayout>
     );

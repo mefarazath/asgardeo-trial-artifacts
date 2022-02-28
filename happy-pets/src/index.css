@@ -10,11 +10,6 @@ body {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-attachment: fixed;
-    background-clip: content-box;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-image: url(./assets/images/bg.png), radial-gradient(at 80% 80%, #fafafa, var(--primary));
     margin: 0;
 }
 
