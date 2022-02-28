@@ -42,7 +42,7 @@ export const DashboardView = (props) => {
                 <h3>Welcome to <strong>Happy Pet Insurance</strong> Dashboard</h3>
             </div>
 
-            <h3 className="mb-4">Here's a summary of your pending claims</h3>
+            <h3 className="mb-4">Here's a summary of your claims</h3>
 
             {
                 insuranceClaims
