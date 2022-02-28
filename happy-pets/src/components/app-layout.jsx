@@ -8,17 +8,22 @@ export const AppLayout = (props) => {
     const {
         isAuthenticated,
         isLoading,
-        children
+        children,
+        logoutButton
     } = props;
 
     return (
-        <div className="container">
-            { isAuthenticated && <Header/> }
-            <div className="main">
-                {
-                    !isLoading
-                        ? children
-                        : (
+        <div className="app-container">
+            { isAuthenticated && <Header logoutButton={ logoutButton } /> }
+            {
+                !isLoading
+                    ? (
+                        <div className={ `main ${ !isAuthenticated ? " login" : "dashboard" }` }>
+                            { children }
+                        </div>
+                    )
+                    : (
+                        <div className="main loading">
                             <Loader
                                 type="BallTriangle"
                                 color="#a660e4"
@@ -26,9 +31,10 @@ export const AppLayout = (props) => {
                                 width={100}
                                 timeout={3000}
                             />
-                        )
-                }
-            </div>
+                        </div>
+                    )
+            }
+
             { isAuthenticated && <Footer/> }
         </div>
     );

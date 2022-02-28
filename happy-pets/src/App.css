@@ -41,7 +41,7 @@ a:hover {
 /*                    Container                          */
 /*-------------------------------------------------------*/
 
-.container {
+.app-container {
     height: 100vh; /* for shorter content */
     display: flex;
     flex-direction: column;
@@ -90,6 +90,20 @@ a:hover {
     justify-content: center;
 }
 
+.main.login, .main.loading  {
+    background-attachment: fixed;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-image: url(./assets/images/bg.png), radial-gradient(at 80% 80%, #fafafa, var(--primary));
+}
+
+.main.dashboard {
+    justify-content: normal;
+    padding: 0.5em 8rem;
+    text-align: left;
+}
+
 /*-------------------------------------------------------*/
 /*                   Login View                          */
 /*-------------------------------------------------------*/
@@ -105,6 +119,11 @@ a:hover {
     min-width: 400px;
     min-height: 300px;
     margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
 }
 
 .login-card-wrapper .login-card:hover {
@@ -144,17 +163,18 @@ a:hover {
 /*-------------------------------------------------------*/
 
 .dashboard-wrapper .greeting {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    padding: 2rem 3rem;
+    background: radial-gradient(at 90% 100%, #d8bdf0, var(--primary));
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
     text-align: center;
-    margin: 30px;
 }
 
 .dashboard-wrapper .greeting h1 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+    font-weight: 500;
 }
 
 .dashboard-wrapper .greeting h1 img {
@@ -239,8 +259,13 @@ a:hover {
 }
 
 .header {
-    justify-content: flex-start;
     border-bottom: 3px solid #a548f6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header img {
