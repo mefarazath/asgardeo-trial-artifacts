@@ -7,6 +7,7 @@ import App from "./App";
 import { AuthProvider } from "@asgardeo/auth-react";
 
 const Index = () => (
+    // PROD
     <AuthProvider
         config={{
             signInRedirectURL: "http://localhost:3000",
@@ -20,6 +21,7 @@ const Index = () => (
     <App />
     </AuthProvider>
 
+    // STAGE
     // <AuthProvider
     //     config={{
     //         signInRedirectURL: "http://localhost:3000",
@@ -33,6 +35,7 @@ const Index = () => (
     //     <App />
     // </AuthProvider>
 
+    // DEV
     // <AuthProvider
     //     config={{
     //         signInRedirectURL: "http://localhost:3000",
