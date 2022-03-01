@@ -1,5 +1,5 @@
 import React from "react"
-import HappyPetLogo from "../assets/images/happy-pet-logo.png";
+import HappyPetLogo from "../assets/images/logo-full.svg";
 
 export const Header = (props) => {
 

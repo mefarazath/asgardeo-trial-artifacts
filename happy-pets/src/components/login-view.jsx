@@ -1,5 +1,5 @@
 import React from "react";
-import HappyPetPaw from "../assets/images/paw.svg";
+import HappyPetLogo from "../assets/images/logo-full.svg";
 import AsgardeoLogo from "../assets/images/asgardeo-logo.svg";
 
 export const LoginView = (props) => {
@@ -18,7 +18,7 @@ export const LoginView = (props) => {
             <h1>Insure your Pet's Health</h1>
             <h2>Happy pet, happy life</h2>
             <div className="card login-card">
-                <img alt="" className="happy-pet-logo" src={ HappyPetPaw }/>
+                <img alt="" className="happy-pet-logo" src={ HappyPetLogo }/>
                 {
                     isAuthenticated !== undefined
                         ? (
