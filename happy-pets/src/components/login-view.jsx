@@ -25,7 +25,7 @@ export const LoginView = (props) => {
                             <React.Fragment>
                                 <h3>Login to your Account</h3>
                                 <p className="login-helper-text">
-                                    Click on the button below login to the account using{ " " }
+                                    Click on the button below to login using{ " " }
                                     <img alt="" className="asgardeo-logo" src={ AsgardeoLogo }/>
                                 </p>
                                 { loginButton }
