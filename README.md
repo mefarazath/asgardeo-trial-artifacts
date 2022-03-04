@@ -1,7 +1,7 @@
 ## Scenario
 Demo scenario by this application will be as follows
 
-1. Login in with Asgardeo
+1. Sign in with Asgardeo
 2. Exchange the id_token obtained to an access token in Choreo
 3. Call an API in Choreo
 
