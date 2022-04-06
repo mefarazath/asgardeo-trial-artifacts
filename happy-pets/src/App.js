@@ -48,8 +48,8 @@ function App() {
         }
 
         return requestCustomGrant(config).then((response) => {
-            // console.log(response?.data?.access_token);
-            return response?.data?.access_token;
+            console.log(response);
+            return response?.access_token;
         }).catch((error) => {
             console.error(error);
         });
@@ -73,7 +73,7 @@ function App() {
 
         return httpRequest(requestConfig)
             .then((response) => {
-                // console.log("API response: ", response);
+                console.log("API response: ", response);
                 return response.data;
             })
             .catch((error) => {
