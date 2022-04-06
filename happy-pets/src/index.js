@@ -14,12 +14,25 @@ const Index = () => (
             signOutRedirectURL: "http://localhost:3000",
             clientID: "Rn5SWjH28S9rJGHLfkAsa_8ooV4a",
             serverOrigin: "https://api.asgardeo.io/t/demo4asgardeo",
-            scope: ["openid", "profile", "internal_login"],
+            scope: ["openid", "email", "profile", "internal_login"],
             resourceServerURLs: ["https://sts.choreo.dev", "https://fc263d73-2930-473f-b767-bbb78f00c212-prod.e1-us-east-azure.choreoapis.dev"],
         }}
      >
     <App />
     </AuthProvider>
+
+    // <AuthProvider
+    //     config={{
+    //         signInRedirectURL: "http://localhost:3000",
+    //         signOutRedirectURL: "http://localhost:3000",
+    //         clientID: "pVpdqRYFlkIx6GHOS7rd4zPI2xoa",
+    //         serverOrigin: "https://api.asgardeo.io/t/maloutconsumer",
+    //         scope: ["openid", "email", "profile", "internal_login"],
+    //         resourceServerURLs: ["https://sts.choreo.dev", "https://fc263d73-2930-473f-b767-bbb78f00c212-prod.e1-us-east-azure.choreoapis.dev"],
+    //     }}
+    // >
+    //     <App />
+    // </AuthProvider>
 
     // STAGE
     // <AuthProvider

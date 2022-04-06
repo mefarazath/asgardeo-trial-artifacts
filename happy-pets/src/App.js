@@ -20,7 +20,8 @@ function App() {
             const choreoToken = await exchangeToken(idToken);
 
             try {
-                const apiResponse = await callAPI(choreoToken, state.username);
+                const username =  state.email || state.username;
+                const apiResponse = await callAPI(choreoToken, username);
                 setInsuranceClaimsFromAPI(apiResponse);
             } catch (error) {
                 // Log or use an alert here.
@@ -56,8 +57,8 @@ function App() {
     }
 
 
-    const callAPI = (choreoToken, username) => {
-        console.log("----   Authenticated User: ", username)
+    const callAPI = (choreoToken, userIdentifier) => {
+        console.log("----   Authenticated User: ", userIdentifier)
         console.log("----   Calling the API with Bearer: ", choreoToken)
         const requestConfig = {
             headers: {
@@ -68,7 +69,7 @@ function App() {
             attachToken: false,
             method: "GET",
             url: process.env.REACT_APP_CHOREO_API_URL,
-            params: {"customerEmail": username}
+            params: {"customerEmail": userIdentifier}
         };
 
         return httpRequest(requestConfig)
@@ -130,6 +131,7 @@ function App() {
             <DashboardView
                 isAuthenticated={state.isAuthenticated}
                 username={state.username}
+                email={state.email}
                 insuranceClaims={ insuranceClaimsFromAPI }
             />
         </AppLayout>
