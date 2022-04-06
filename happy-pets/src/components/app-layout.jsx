@@ -26,7 +26,7 @@ export const AppLayout = (props) => {
                         <div className="main loading">
                             <Loader
                                 type="BallTriangle"
-                                color="#a660e4"
+                                color="#070544"
                                 height={100}
                                 width={100}
                                 timeout={3000}

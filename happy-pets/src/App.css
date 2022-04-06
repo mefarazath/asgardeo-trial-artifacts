@@ -167,7 +167,7 @@ a:hover {
     margin-bottom: 30px;
     color: #ffffff;
     padding: 2rem 3rem;
-    background: radial-gradient(at 90% 100%, #d8bdf0, var(--primary));
+    background: radial-gradient(at 90% 100%, #d8bdf0, #070544FF);
     margin-bottom: 2rem;
     border-radius: 0.3rem;
     text-align: center;
@@ -259,7 +259,7 @@ a:hover {
 }
 
 .header {
-    border-bottom: 3px solid #a548f6;
+    border-bottom: 3px solid #070544FF;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -276,7 +276,7 @@ a:hover {
 .footer {
     /*ie10 short content*/
     margin-top: auto;
-    border-top: 3px solid #a548f6;
+    border-top: 3px solid #070544FF;
 }
 
 .footer .copyright .asgardeo-logo {
@@ -309,7 +309,7 @@ a:hover {
 
 button {
     color: #fff;
-    background-color: #60467e;
+    background-color: var(--primary);
     border: 1px solid #60467e;
     display: inline-block;
     font-weight: 300;

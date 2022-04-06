@@ -39,7 +39,7 @@ export const DashboardView = (props) => {
                     Hi { displayName || username || email }!
                 </h1>
                 <hr />
-                <h3>Welcome to <strong>Happy Pet Insurance</strong> Dashboard</h3>
+                <h3>Welcome to <strong>Happy Pets Insurance</strong> Dashboard</h3>
             </div>
 
             <h3 className="mb-4">Here's a summary of your claims</h3>
@@ -77,7 +77,7 @@ export const DashboardView = (props) => {
                     : (
                         <Loader
                             type="ThreeDots"
-                            color="#a660e4"
+                            color="#070544"
                             height={100}
                             width={100}
                             timeout={3000}

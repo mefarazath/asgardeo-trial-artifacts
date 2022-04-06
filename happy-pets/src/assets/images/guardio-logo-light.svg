@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="817" height="193" viewBox="0 0 817 193">
+    <defs>
+        <linearGradient id="linear-gradient" x1="0.5" y1="-0.035" x2="0.5" y2="1.097" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff33b"/>
+            <stop offset="0.014" stop-color="#fee72e"/>
+            <stop offset="0.042" stop-color="#fed51b"/>
+            <stop offset="0.07" stop-color="#fdca10"/>
+            <stop offset="0.1" stop-color="#fdc70c"/>
+            <stop offset="0.4" stop-color="#f3903f"/>
+            <stop offset="0.8" stop-color="#ed683c"/>
+            <stop offset="1" stop-color="#e93e3a"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x1="0.5" y1="-0.125" x2="0.5" y2="1.229" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-3" x1="0.5" y1="-0.581" x2="0.5" y2="2.031" xlink:href="#linear-gradient"/>
+        <clipPath id="clip-Artboard_1">
+            <rect width="817" height="193"/>
+        </clipPath>
+    </defs>
+    <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+        <g id="protect-protection-sheild-safeguard-virus" transform="translate(3.618 2.538)">
+            <g id="Group_1" data-name="Group 1" transform="translate(18.764 2.002)">
+                <path id="Path_1" data-name="Path 1" d="M157.816,23.54,84.367,2.117a3.256,3.256,0,0,0-1.714,0L9.2,23.54A3.06,3.06,0,0,0,7,26.478V81.565a69.385,69.385,0,0,0,20.474,49.18v.031l53.863,53.955a3.1,3.1,0,0,0,4.346,0l53.863-53.985a69.385,69.385,0,0,0,20.474-49.18V26.478a3.06,3.06,0,0,0-2.2-2.938ZM153.9,81.565a63.27,63.27,0,0,1-18.7,44.865L83.51,178.212,31.82,126.43a63.271,63.271,0,0,1-18.7-44.865V28.773L83.51,8.238,153.9,28.773Z" transform="translate(-7 -2.002)" fill="url(#linear-gradient)"/>
+                <path id="Path_2" data-name="Path 2" d="M137.333,24.145,76.125,6.3a2.736,2.736,0,0,0-1.714,0L13.2,24.145A3.06,3.06,0,0,0,11,27.083V72.989a57.254,57.254,0,0,0,16.893,40.55L73.1,158.8a3.03,3.03,0,0,0,4.346,0l45.171-45.263a57.156,57.156,0,0,0,16.924-40.55V27.083a3.06,3.06,0,0,0-2.2-2.938Zm-3.917,48.844A51.216,51.216,0,0,1,118.3,109.224l-43.029,43.09-43.029-43.09A51.142,51.142,0,0,1,17.121,72.989V29.378L75.268,12.423l58.147,16.955Z" transform="translate(1.242 6.574)" fill="url(#linear-gradient-2)"/>
+                <path id="Path_4" data-name="Path 4" d="M58.785,15A39.785,39.785,0,1,0,98.57,54.785,39.785,39.785,0,0,0,58.785,15Zm0,73.449A33.664,33.664,0,1,1,92.449,54.785,33.664,33.664,0,0,1,58.785,88.449Z" transform="translate(17.725 24.777)" fill="url(#linear-gradient-3)"/>
+                <text id="G" transform="translate(60.619 96.46)" fill="#f0803d" font-size="47" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">G</tspan></text>
+            </g>
+        </g>
+        <text id="Guardio" transform="translate(226 149)" fill="#262565" font-size="161" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Guardio</tspan></text>
+    </g>
+</svg>
