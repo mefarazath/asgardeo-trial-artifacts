@@ -13,10 +13,10 @@ const Index = () => (
         config={{
             signInRedirectURL: "http://localhost:3000",
             signOutRedirectURL: "http://localhost:3000",
-            clientID: "95r6vFUizPYmkG3I6G3_6bAqZiQa",
+            clientID: "QaGCmCUe9oZs9Zd4MFDp3a8ZUjMa",
             serverOrigin: "https://api.asgardeo.io/t/netflicks",
             scope: ["openid", "email", "profile", "internal_login"],
-            resourceServerURLs: ["https://sts.choreo.dev", "https://fc263d73-2930-473f-b767-bbb78f00c212-prod.e1-us-east-azure.choreoapis.dev"],
+            resourceServerURLs: ["https://sts.choreo.dev", "https://b22217d0-958b-428e-a30b-7206af4b746c-prod.e1-us-east-azure.choreoapis.dev"],
         }}
      >
     <App />

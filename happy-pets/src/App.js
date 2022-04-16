@@ -7,8 +7,8 @@ function App() {
     /** Empty state  */
     const { state, signIn, signOut, httpRequest, getIDToken, requestCustomGrant, getDecodedIDToken } = useAuthContext();
 
-    const [ decodedIdToken, setDecodedIdToken ] = useState();
-    const [ insuranceClaimsFromAPI, setInsuranceClaimsFromAPI ] = useState(undefined);
+    const [decodedIdToken, setDecodedIdToken] = useState();
+    const [insuranceClaimsFromAPI, setInsuranceClaimsFromAPI] = useState(undefined);
 
     React.useEffect(() => {
         if (!state?.isAuthenticated) {
@@ -20,7 +20,7 @@ function App() {
             const choreoToken = await exchangeToken(idToken);
 
             try {
-                const username =  state.email || state.username;
+                const username = state.email || state.username;
                 const apiResponse = await callAPI(choreoToken, username);
                 setInsuranceClaimsFromAPI(apiResponse);
             } catch (error) {
@@ -59,22 +59,30 @@ function App() {
 
     const callAPI = (choreoToken, userIdentifier) => {
         console.log("----   Authenticated User: ", userIdentifier)
+        console.log("---- API: ", process.env.REACT_APP_CHOREO_API_URL)
         console.log("----   Calling the API with Bearer: ", choreoToken)
-        const requestConfig = {
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-                "Authorization": "Bearer " + choreoToken
-            },
+
+
+        var data = JSON.stringify({
+            "subscriber": userIdentifier
+        });
+
+        var config = {
+            method: 'post',
             attachToken: false,
-            method: "GET",
-            url: process.env.REACT_APP_CHOREO_API_URL,
-            params: {"customerEmail": userIdentifier}
+            url: 'https://b22217d0-958b-428e-a30b-7206af4b746c-prod.e1-us-east-azure.choreoapis.dev/boio/subscription-manager/1.0.0/subscribe',
+            headers: {
+                'accept': '*/*',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + choreoToken
+            },
+            data: data
         };
 
-        return httpRequest(requestConfig)
+        return httpRequest(config)
             .then((response) => {
                 console.log("API response: ", response);
+                console.log("API response: ", response.status);
                 return response.data;
             })
             .catch((error) => {
@@ -132,7 +140,7 @@ function App() {
                 isAuthenticated={state.isAuthenticated}
                 username={state.username}
                 email={state.email}
-                insuranceClaims={ insuranceClaimsFromAPI }
+                insuranceClaims={insuranceClaimsFromAPI}
             />
         </AppLayout>
     );
