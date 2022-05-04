@@ -15,7 +15,7 @@ const Index = () => (
             clientID: "Rn5SWjH28S9rJGHLfkAsa_8ooV4a",
             serverOrigin: "https://api.asgardeo.io/t/demo4asgardeo",
             scope: ["openid", "email", "profile", "internal_login"],
-            resourceServerURLs: ["https://sts.choreo.dev", "https://fc263d73-2930-473f-b767-bbb78f00c212-prod.e1-us-east-azure.choreoapis.dev"],
+            resourceServerURLs: ["https://sts.choreo.dev", "https://b22217d0-958b-428e-a30b-7206af4b746c-prod.e1-us-east-azure.choreoapis.dev"],
         }}
      >
     <App />
